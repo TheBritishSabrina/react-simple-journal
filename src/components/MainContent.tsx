@@ -24,42 +24,22 @@ function MainContent(): JSX.Element {
         likes={5}
         postDate={{ month: "March", day: 3, year: 2003 }}
       />
-      <section>
-        <h2>Writing poetry</h2>
-        <p>
-          <i>Tags: poetry, meta</i>
-        </p>
-        <p>
-          Being creative... I'd like to do more of it. I'll write some haikus!
-        </p>
-        <h4>Stats</h4>
-        <ul>
-          <li>Views: 93</li>
-          <li>Likes: 11</li>
-        </ul>
-        <p>
-          <small>Posted: March 2, 2003</small>
-        </p>
-      </section>
-      <section>
-        <h2>The trolley problem</h2>
-        <p>
-          <i>Tags: philosophy</i>
-        </p>
-        <p>
-          I came across the Trolley Problem recently. I found it deeply
-          troubling... why is it called 'the Trolley Problem' when it's actually
-          about trains?
-        </p>
-        <h4>Stats</h4>
-        <ul>
-          <li>Views: 2</li>
-          <li>Likes: 0</li>
-        </ul>
-        <p>
-          <small>Posted: July 28, 2003</small>
-        </p>
-      </section>
+      <JournalEntry 
+        title={"Writing poetry"}
+        tags={["poetry", "meta"]}
+        body={"Being creative... I'd like to do more of it. I'll write some haikus!"}
+        views={93}
+        likes={11}
+        postDate={{ month: "March", day: 2, year: 2003}}
+      />
+      <JournalEntry 
+        title={"The trolley problem"}
+        tags={["philosophy"]}
+        body={"I came across the Trolley Problem recently. I found it deeply troubling... why is it called 'the Trolley Problem' when it's actually about trains?"}
+        views={2}
+        likes={0}
+        postDate={{ month: "July", day: 28, year: 2003}}
+      />
     </main>
   );
 }
